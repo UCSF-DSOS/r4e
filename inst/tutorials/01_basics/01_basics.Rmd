@@ -9,8 +9,8 @@ library(learnr)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-
 ## Lesson Objective
+
 *Describe reasons to use RStudio to interact with R.*
 
 ![R and RStudio Logos](images/r_logos.png "R and RStudio Logos"){width="100%"}
@@ -31,13 +31,17 @@ R is a great option for the following reasons:
 -   There is a large community of R users (many of whom do data science) who provide support for each other.
 
 <details>
+
 <summary>
+
 **R vs Python**
+
 </summary>
 
 Another popular language used for data science and statistical applications is Python. Although this course is R-based, both R and Python are excellent programming languages for beginners to learn.
 
 To determine whether to start with R and Python, we recommend picking the language your friends and colleagues use. That way, they can support you as you are learning!
+
 </details>
 
 <br />
@@ -102,19 +106,13 @@ At this point, the Console is the only RStudio feature you should know about. As
 -   RStudio is an integrated development environment (IDE) used to interact with R.
 -   Inside the RStudio Console, you can enter R commands.
 
-+------------------------------------------+---------------------------------------------------------------------------------------+
 | Vocabulary                               | Definition                                                                            |
-+:=========================================+:======================================================================================+
+|:-----------------------|:-----------------------------------------------|
 | R                                        | A programming language used frequently for data science and statistical applications. |
-+------------------------------------------+---------------------------------------------------------------------------------------+
 | Programming Language                     | A human-interpretable way to provide specific instructions to a computer.             |
-+------------------------------------------+---------------------------------------------------------------------------------------+
 | RStudio                                  | An integrated development environment (IDE) used to interact with R.                  |
-+------------------------------------------+---------------------------------------------------------------------------------------+
 | Integrated Development Environment (IDE) | An computer application that supports programming tasks.                              |
-+------------------------------------------+---------------------------------------------------------------------------------------+
 | Console                                  | A space in RStudio where you can enter R commands.                                    |
-+------------------------------------------+---------------------------------------------------------------------------------------+
 
 **References**
 
@@ -131,4 +129,3 @@ At this point, the Console is the only RStudio feature you should know about. As
 -   *JuliaLang/Julia-Logo-Graphics*. 2014. The Julia Programming Language, 2021. *GitHub*, <https://github.com/JuliaLang/julia-logo-graphics.>
 
 -   *Swift Resources - Apple Developer*. <https://developer.apple.com/swift/resources/.>
-
