@@ -9,7 +9,7 @@ library(learnr)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Lesson Objective
+## Getting Started
 
 *Describe reasons to use RStudio to interact with R.*
 
