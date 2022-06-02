@@ -10,65 +10,85 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
-## Topic 1
+## Lesson Objective
 
-### Exercise 
+*Lesson Objective: Create and run R scripts.*
 
-*Here's a simple exercise with an empty code chunk provided for entering the answer.*
+You now know a little bit more about R and RStudio, and at this point, you should be able to use the RStudio Console as a calculator. You may be unaware, but by entering commands into the RStudio Console, you are doing computer programming!
 
-Write the R code required to add two plus two:
+![Computer programming is fun!](images/fun.png "Computer programming is fun!"){width="353"}
 
-```{r two-plus-two, exercise=TRUE}
+Many people describe **computer programming** (often called **coding**) as creating executable instructions for computers. Let's unpack this.
 
-```
+## What are Computers?
 
-### Exercise with Code
+> Computers do computing...
 
-*Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
+This may seem trivial, but let's first think about what computers are. Simply put, **computers** do computing, and one of the first images that may come to mind as you think about computers is the device you are interacting with right now.
 
-Now write a function that adds any two numbers and then call it:
+However, computers encompass so much more. After all, this device you are interacting with isn't the only thing that did computing throughout history.
 
-```{r add-function, exercise=TRUE, exercise.lines = 5}
-add <- function() {
-  
-}
-```
+-   In 160-220, The Chinese used the Abacus (Suanpan) to do computing.
+-   In the 1840s, Ada Lovelace created the first computer program using an "Analytical Engine"
+-   In the 1950s, NASA hired people "computers" to do computing and help launch rockets into space.
+-   In the 1980s, Apple came out with the Macintosh which was the first "personal computer."
 
-## Topic 2
+![Computers took different forms throughout history.](images/computers.png "Computers"){width="100%"}
 
-### Exercise with Hint
+Why does this matter? Your executable instructions, also called **computer programs**, are not only meant to be consumed by computing devices. Computer programs are designed to be interpreted by other "human" computers too. After all, we use programming languages because they are *human-interpretable* ways to provide instructions to computers.
 
-*Here's an exercise where the chunk is pre-evaulated via the `exercise.eval` option (so the user can see the default output we'd like them to customize). We also add a "hint" to the correct solution via the chunk immediate below labeled `print-limit-hint`.*
+## Computer Programming with R Scripts
 
-Modify the following code to limit the number of rows printed to 5:
+One of the most common mediums for you to create computer programs with R is an R Script. In the RStudio Console, you can only enter a single R command at a time, but with **R Scripts**, you can include multiple commands to be run sequentially repeatedly.
 
-```{r print-limit, exercise=TRUE, exercise.eval=TRUE}
-mtcars
-```
+To create an R Script in RStudio, go to *File* -\> *New File* -\> *R Script*. You should now see a new **Source Editor** pane appear above the Console.
 
-```{r print-limit-hint}
-head(mtcars)
-```
+![The Source Editor is located about the RStudio Console.](images/source_editor.png "Source Editor"){width="100%"}
 
-### Quiz
+Enter the following lines of code into the Source Editor:
 
-*You can include any number of single or multiple choice questions as a quiz. Use the `question` function to define a question and the `quiz` function for grouping multiple questions together.*
+    print(1 + 1)
+    print("That's not a window")
+    print("These lines of code are run in sequence")
 
-Some questions to verify that you understand the purposes of various base and recommended R packages:
+Select all the code you entered, and then select *Run*.
 
-```{r quiz}
-quiz(
-  question("Which package contains functions for installing other R packages?",
-    answer("base"),
-    answer("tools"),
-    answer("utils", correct = TRUE),
-    answer("codetools")
-  ),
-  question("Which of the R packages listed below are used to create plots?",
-    answer("lattice", correct = TRUE),
-    answer("tools"),
-    answer("stats"),
-    answer("grid", correct = TRUE)
-  )
+![Click Run to execute your R script.](images/run.png "Run Code"){width="100%"}
+
+
+You should then see the Console run all the code you entered into your R script. You can also run individual lines of code by selecting only a single line before selecting *Run*.
+
+If you would like to re-use your code, be sure to save your R script. Then, the next time you open RStudio, you will be able to open the existing R Script and run it.
+
+## Knowledge Check
+
+```{r KC-1, echo=FALSE}
+question("TRUE or FALSE: My R scripts don't need to be interpretable by anyone but me and R!",
+  answer("TRUE ", message = "Not quite. Think about all the *computers* you are creating computer programs for."),
+  answer("FALSE ", correct = TRUE, message = "That's right. You should strive to make your computer programs interpretable to all computers, including humans!"),
+  allow_retry = TRUE
 )
 ```
+
+## Summary
+
+**Key Concepts**
+
+-   Many people describe **computer programming** (often called **coding**) as creating executable instructions for computers.
+-   You can use **R Scripts** to create R computer programs with multiple commands.
+
+| Vocabulary                    | Definition                                                                                           |
+|:------------------------------|:-----------------------------------------------------------------------------------------------------|
+| Computer Programming (Coding) | Creating executable instructions for computers.                                                      |
+| R Script                      | An executable R program that can contain multiple R commands.                                        |
+| Source Editor                 | A pane in RStudio where you can edit R Scripts and other types of files.                             |
+
+**References**
+
+-   Tribble, David R. *Abacus 5.jpg*. <https://commons.wikimedia.org/wiki/File:Abacus_5.jpg>
+
+-   "Ada Lovelace and the Abstract Machine - Essay - Technology." *TLS*, [www.the-tls.co.uk/articles/ada-lovelaces-abstract-machine/](www.the-tls.co.uk/articles/ada-lovelaces-abstract-machine/).
+
+-   "The Women of NASA." *National Women's History Museum*, [www.womenshistory.org/exhibits/women-nasa.](www.womenshistory.org/exhibits/women-nasa)
+
+-   Wikipedia contributors. "Macintosh 128K." *Wikipedia*, [en.wikipedia.org/wiki/Macintosh_128K.](en.wikipedia.org/wiki/Macintosh_128K)
