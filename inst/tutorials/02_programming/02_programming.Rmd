@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
-## Lesson Objective
+## Getting Started
 
 *Lesson Objective: Create and run R scripts.*
 
