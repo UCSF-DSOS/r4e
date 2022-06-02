@@ -2,6 +2,9 @@
 title: "R for Everyone Part 0: Introduction"
 output: learnr::tutorial
 runtime: shiny_prerendered
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 ```{r setup, include=FALSE}
@@ -9,66 +12,60 @@ library(learnr)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+## Course Overview
 
-## Topic 1
+Want to learn computer programming but don't know where to start? You're
+in the right place! R for Everyone is a friendly introduction to R, and
+you will learn basic computer programming with R. The topics we'll cover
+are:
 
-### Exercise 
+1.  R and RStudio
 
-*Here's a simple exercise with an empty code chunk provided for entering the answer.*
+2.  Computer Programming
 
-Write the R code required to add two plus two:
+3.  Objects
 
-```{r two-plus-two, exercise=TRUE}
+4.  Conditions
 
-```
+5.  Loops
 
-### Exercise with Code
+6.  Functions
 
-*Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
+7.  Vectors
 
-Now write a function that adds any two numbers and then call it:
+8.  Matrices
 
-```{r add-function, exercise=TRUE, exercise.lines = 5}
-add <- function() {
-  
-}
-```
+9.  Data Frames
 
-## Topic 2
+### Prerequisites
 
-### Exercise with Hint
+This course is designed for beginners, and there are no pre-requisites.
+However, you'll need to have some software installed:
 
-*Here's an exercise where the chunk is pre-evaulated via the `exercise.eval` option (so the user can see the default output we'd like them to customize). We also add a "hint" to the correct solution via the chunk immediate below labeled `print-limit-hint`.*
+-   [Install R](https://cran.r-project.org/)
+-   [Install
+    RStudio](https://www.rstudio.com/products/rstudio/download/)
 
-Modify the following code to limit the number of rows printed to 5:
+Chances are, if you're viewing this course, you already have these
+installed. However, if that is not the case, take a moment to install
+both R and RStudio on your computer (both macOS and Windows are fine),
+and we'll discuss what these are later! If you already have these
+installed, you are good to go!
 
-```{r print-limit, exercise=TRUE, exercise.eval=TRUE}
-mtcars
-```
+### Course Authors
 
-```{r print-limit-hint}
-head(mtcars)
-```
+-   [Karla Lindquist, PhD](http://profiles.ucsf.edu/karla.lindquist) is
+    the Scientific Lead for the Data Science Initiative in the UCSF
+    Library.
+-   [Albert Lee](https://www.linkedin.com/in/albemlee/) is an
+    Instructional Designer and Analyst for the Data Science Initiative
+    in the UCSF Library.
 
-### Quiz
+### Creative Commons
 
-*You can include any number of single or multiple choice questions as a quiz. Use the `question` function to define a question and the `quiz` function for grouping multiple questions together.*
+All materials and topics in this course are subject to periodical
+changes and updates by the Instructor. This work is licensed under a
+[Creative Commons Attribution-NonCommercial 4.0 International
+License](http://creativecommons.org/licenses/by-nc/4.0/).
 
-Some questions to verify that you understand the purposes of various base and recommended R packages:
-
-```{r quiz}
-quiz(
-  question("Which package contains functions for installing other R packages?",
-    answer("base"),
-    answer("tools"),
-    answer("utils", correct = TRUE),
-    answer("codetools")
-  ),
-  question("Which of the R packages listed below are used to create plots?",
-    answer("lattice", correct = TRUE),
-    answer("tools"),
-    answer("stats"),
-    answer("grid", correct = TRUE)
-  )
-)
-```
+![](images/creative_commons.png)
