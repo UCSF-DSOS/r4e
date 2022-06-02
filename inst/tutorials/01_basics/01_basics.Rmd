@@ -10,65 +10,36 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
-## Topic 1
+## Lesson Objective
+*Describe reasons to use RStudio to interact with R.*
 
-### Exercise 
+![R and RStudio Logos](images/r_logos.png "R and RStudio Logos"){width="100%"}
 
-*Here's a simple exercise with an empty code chunk provided for entering the answer.*
+You may have heard that R and RStudio are great tools for doing data science, but do you know what makes them useful? Also, what's the difference between R and RStudio?
 
-Write the R code required to add two plus two:
+## What is R?
 
-```{r two-plus-two, exercise=TRUE}
+**R** is a programming language used frequently for data science and statistical applications.
 
-```
+A **programming language** is a human-interpretable way to provide specific instructions to a computer. There are many programming languages out there, and some examples are Python, Javascript, and C++.
 
-### Exercise with Code
+![Programming Language Logos Displayed: R, Python, C++, Java, Julia, Swift](images/programming_languages.png "Programming Languages"){width="100%"}
 
-*Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
+R is a great option for the following reasons:
 
-Now write a function that adds any two numbers and then call it:
+-   It is free and open source.
+-   There is a large community of R users (many of whom do data science) who provide support for each other.
 
-```{r add-function, exercise=TRUE, exercise.lines = 5}
-add <- function() {
-  
-}
-```
+<details>
+<summary>
+**R vs Python**
+</summary>
 
-## Topic 2
+Another popular language used for data science and statistical applications is Python. Although this course is R-based, both R and Python are excellent programming languages for beginners to learn.
 
-### Exercise with Hint
+To determine whether to start with R and Python, we recommend picking the language your friends and colleagues use. That way, they can support you as you are learning!
+</details>
 
-*Here's an exercise where the chunk is pre-evaulated via the `exercise.eval` option (so the user can see the default output we'd like them to customize). We also add a "hint" to the correct solution via the chunk immediate below labeled `print-limit-hint`.*
+<br />
 
-Modify the following code to limit the number of rows printed to 5:
-
-```{r print-limit, exercise=TRUE, exercise.eval=TRUE}
-mtcars
-```
-
-```{r print-limit-hint}
-head(mtcars)
-```
-
-### Quiz
-
-*You can include any number of single or multiple choice questions as a quiz. Use the `question` function to define a question and the `quiz` function for grouping multiple questions together.*
-
-Some questions to verify that you understand the purposes of various base and recommended R packages:
-
-```{r quiz}
-quiz(
-  question("Which package contains functions for installing other R packages?",
-    answer("base"),
-    answer("tools"),
-    answer("utils", correct = TRUE),
-    answer("codetools")
-  ),
-  question("Which of the R packages listed below are used to create plots?",
-    answer("lattice", correct = TRUE),
-    answer("tools"),
-    answer("stats"),
-    answer("grid", correct = TRUE)
-  )
-)
-```
+***Pro Tip**: Although it is useful to understand multiple programming languages, you should only learn one programming language at a time (especially if you are a beginner). Once you have mastered one programming language, then you can try learning others.*
