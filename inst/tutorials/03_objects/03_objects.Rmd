@@ -151,12 +151,8 @@ quiz(
 
 **Key Concepts**
 
--   Many people describe **computer programming** (often called **coding**) as creating executable instructions for computers.
--   You can use **R Scripts** to create R computer programs with multiple commands.
 -   You can store values inside of **objects** and reuse them.
 -   The **Environment pane** in RStudio contains a current list of objects and their values.
--   **Control structures**, such as **conditions** and **loops**, control the flow of your computer program.
--   **Functions** are blocks of code that you can **call** or **define** to complete specific tasks.
 
 | Vocabulary                    | Definition                                                                                           |
 |:------------------------------|:-----------------------------------------------------------------------------------------------------|

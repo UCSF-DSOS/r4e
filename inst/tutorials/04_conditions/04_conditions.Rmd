@@ -10,65 +10,232 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
-## Topic 1
+## Getting Started
 
-### Exercise 
+*Lesson Objective: Apply conditional logic using if...else statement.*
 
-*Here's a simple exercise with an empty code chunk provided for entering the answer.*
+Up to this point, the computer programs (R scripts) you created all executed sequentially. In other words, R ran every line of your code in order for top to bottom.
 
-Write the R code required to add two plus two:
+In many cases, you may want your code to run differently, and you need to apply **control structures** to control the flow of your computer program. The first type of control structure you'll learn about is the condition.
 
-```{r two-plus-two, exercise=TRUE}
+## What is a Condition?
+
+In real life, conditions indicate situations or circumstances that must be true in order for something to happen. Below are some examples of statements with conditions (conditions are *italicized*):
+
+-   "Make sure to drip your faucets *when the temperature drops below 15 degrees Fahrenheit*."
+
+-   "We cannot run a marathon unless *we prepare and train regularly*."
+
+-   "*If you have a question*, please raise your hand."
+
+In computer programming, **conditions** indicate something that must be true in order for some code to be executed. Notice how the phrase *must be true* appears in our definition of conditions in both real life and computer programming. Let's dig a little deeper and see how we determine whether something is true in computer programming.
+
+## Boolean Expressions
+
+To determine whether something is true we use boolean expressions. **Boolean** expressions result in boolean values, and boolean values are values that are either `TRUE` or `FALSE` . Similar to other types of values, boolean values can be stored inside of objects. Let's take a look at some boolean values and expressions below.
+
+```{r exercise_02a, exercise=TRUE}
+# Assign to an object called `x`, the result of `1 == 1`
+x <- 1 == 1
+
+# Assign to an object called `y`, the result of `2 < 1`
+y <- 2 < 1
+```
+
+```{r exercise_02b, echo=FALSE}
+quiz(
+  caption = "Answer the following questions:",
+  question("What is the value of x? *Hint: Print the value of x in the code block above.*",
+    answer("TRUE ", correct = TRUE),
+    answer("FALSE "),
+    answer("1"),
+    answer("2"),
+    allow_retry = TRUE
+  ),
+  question("What is the value of y? *Hint: Print the value of y in the code block above.*",
+    answer("TRUE "),
+    answer("FALSE ", correct = TRUE),
+    answer("1"),
+    answer("2"),
+    allow_retry = TRUE
+  )
+)
 
 ```
 
-### Exercise with Code
+The `==` and `<` operators are just two examples of operators that produce boolean values. There are others, and they are listed below:
 
-*Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
+| Operator | Description                                                                                       | Example                       |
+|----------|---------------------------------------------------------------------------------------------------|-------------------------------|
+| `<`      | **Less than:** TRUE if the left value is less than the right value.                               | `1 < 2 #This is TRUE`         |
+| `<=`     | **Less than or equal to:** TRUE if the left value is less than or equal to the right value.       | `1 <= 1 #This is FALSE`       |
+| `>`      | **Greater than:** TRUE if the left value is greater than the right value.                         | `1 > 1 #This is FALSE`        |
+| `>=`     | **Greater than or equal to:** TRUE if the left value is greater than or equal to the right value. | `3 >= 2 #This is TRUE`        |
+| `==`     | **Equal to:** TRUE if the left value is equal to the right value.                                 | `3 == 2 #This is FALSE`       |
+| `!=`     | **Not equal to:** TRUE if the left value is not equal to the right value.                         | `1 != 1 #This is FALSE`       |
+| `!`      | **Not:** TRUE if the value is FALSE, FALSE if the value is TRUE.                                  | `! TRUE #This is FALSE`       |
+| `|`      | **Or:** TRUE if either the left value or right value are TRUE.                                    | `TRUE | FALSE #This is TRUE`  |
+| `&`      | **And:** TRUE if both the left value and right value are TRUE.                                    | `TRUE & FALSE #This is FALSE` |
 
-Now write a function that adds any two numbers and then call it:
+Similar to other operators, these operators can be used with variables (e.g. `x <= y`).
 
-```{r add-function, exercise=TRUE, exercise.lines = 5}
-add <- function() {
-  
+## If...Else Statements
+
+Now that you know about boolean expressions, you're ready to learn about conditions in R. Specifically, you'll learn about **if...else** statements.
+
+The most basic form of an if...else statement executes some code if a boolean expression is TRUE. To do this, you'll need to use `if`. Take a look below:
+
+```{r exercise_02c, exercise=TRUE}
+# Assign to an object named `x` the value `1`
+x <- 1
+
+if (x > 0){     # Check whether `x` is greater than `0`
+  x <- x + 1    # if `x > 0` is TRUE, then add `1` to `x`
 }
 ```
 
-## Topic 2
-
-### Exercise with Hint
-
-*Here's an exercise where the chunk is pre-evaulated via the `exercise.eval` option (so the user can see the default output we'd like them to customize). We also add a "hint" to the correct solution via the chunk immediate below labeled `print-limit-hint`.*
-
-Modify the following code to limit the number of rows printed to 5:
-
-```{r print-limit, exercise=TRUE, exercise.eval=TRUE}
-mtcars
-```
-
-```{r print-limit-hint}
-head(mtcars)
-```
-
-### Quiz
-
-*You can include any number of single or multiple choice questions as a quiz. Use the `question` function to define a question and the `quiz` function for grouping multiple questions together.*
-
-Some questions to verify that you understand the purposes of various base and recommended R packages:
-
-```{r quiz}
-quiz(
-  question("Which package contains functions for installing other R packages?",
-    answer("base"),
-    answer("tools"),
-    answer("utils", correct = TRUE),
-    answer("codetools")
-  ),
-  question("Which of the R packages listed below are used to create plots?",
-    answer("lattice", correct = TRUE),
-    answer("tools"),
-    answer("stats"),
-    answer("grid", correct = TRUE)
-  )
+```{r exercise_02c_mc, echo=FALSE}
+question("What is the value of x?",
+  answer("1"),
+  answer("2", correct = TRUE),
+  answer("TRUE"),
+  answer("FALSE"),
+  allow_retry = TRUE
 )
 ```
+
+Sometimes, you may want to do something else if the boolean expression turns out to be FALSE. To do this, you'll need to include an `else`. Take a look below:
+
+```{r exercise_02d, exercise=TRUE, exercise.diagnostics=FALSE}
+# Assign to an object named `y` the value `10`
+y <- 10
+
+if (y < 5){     # Check whether `y` is less than `5`
+  y <- y * 50   # If `y < 5` is TRUE, multiply `y` by `50`
+} else {        # Otherwise...
+  y <- 1        # Assign `1` to `y`
+}
+```
+
+```{r exercise_02d_mc, echo=FALSE}
+question("What is the value of y?",
+  answer("10"),
+  answer("500"),
+  answer("5"),
+  answer("1", correct = TRUE),
+  allow_retry = TRUE
+)
+```
+
+In other cases, you may want to check multiple conditions and perform different actions depending on which is TRUE. To do this, you'll need to use `else if`. Take a look below:
+
+```{r exercise_02e, exercise=TRUE, exercise.diagnostics=FALSE}
+# Assign to an object named `z` the value `50`
+z <- 50
+
+if (z > 5){               # Check whether `z` is greater than `5`
+  z <- z * 50             # If `z > 5` is TRUE, then multiply `z` by `50`
+} else if (z > 200){      # Otherwise, check if `z > 200`
+  z <- 50                 # If `z > 200` is TRUE, Assign `50` to `z`
+} else {                  # Otherwise...
+  z <- 1                  # If none of the conditions above are TRUE, assign `1` to `z`
+}
+```
+
+```{r exercise_02e_mc, echo=FALSE}
+question("What is the value of z?",
+  answer("50"),
+  answer("2500", correct = TRUE),
+  answer("5"),
+  answer("1"),
+  allow_retry = TRUE
+)
+```
+
+You can have multiple `else if`s chained together if you have many conditions to evaluate.
+
+Generalizing what you saw in the above scenarios, conditional statements in R take the **if...else** form below:
+
+    if (boolean_expression){
+
+      # Execute some_code if `boolean_expression` is `TRUE`
+      some_code 
+      
+    } else if (another_boolean_expression){
+
+      # Execute `some_other_code` if `boolean_expression` is `FALSE` and `another_boolean_expression` is `TRUE`
+      some_other_code 
+      
+    } else {
+
+      # Execute `some_more_code` if all the above conditions are `FALSE`
+      some_more_code 
+      
+    }
+
+## Knowledge Check
+
+Write some code based on the description below:
+
+    Subtract 85 from 100 and assign the result to an object named `score`
+
+    If score is 90 or above, assign 'A' to an object named `grade`
+
+    Otherwise if the `score` is 80 or above, assign 'B' to an object named `grade`
+
+    Otherwise if the `score` is 70 or above, assign 'C' to an object named `grade`
+
+    Otherwise if the `score` is 60 or above, assign 'D' to an object named `grade`
+
+    Otherwise if the `score` is below 60, assign 'Hidden' to an object named `grade`
+
+    Print the value stored in `grade`
+
+You can reveal the solution once you are comfortable with your response
+
+```{r KC2, exercise=TRUE, exercise.lines=15, exercise.diagnostics=FALSE}
+# YOUR WORK HERE
+# Subtract 85 from 100 and assign the result to an object named `score`
+
+# If score is 90 or above, assign "A" to an object named `grade`
+
+# Otherwise if the `score` is 80 or above, assign "B" to an object named `grade`
+
+# Otherwise if the `score` is 70 or above, assign "C" to an object named `grade`
+
+# Otherwise if the `score` is 60 or above, assign "D" to an object named `grade`
+
+# Otherwise if the `score` is below 60, assign "Hidden" to an object named `grade`
+
+# Print the value stored in `grade`
+
+```
+
+```{r KC2-solution}
+# Subtract 85 from 100 and assign the result to an object named `score`
+score = 100 - 85
+
+if (score >= 90){          # If score is 90 or above, assign "A" to an object named `grade`
+  grade <- "A"
+} else if (score >= 80){   # Otherwise if the `score` is 80 or above, assign "B" to an object named `grade`
+  grade <- "B"
+} else if (score >= 70){   # Otherwise if the `score` is 70 or above, assign "C" to an object named `grade`
+  grade <- "C"
+} else if (score >= 60){   # Otherwise if the `score` is 60 or above, assign "D" to an object named `grade`
+  grade <- "D"
+} else{                   # Otherwise if the `score` is below 60, assign "Hidden" to an object named `grade`
+  grade <- "Hidden"
+}
+
+# Print the value stored in `grade`
+print(grade)
+```
+
+## Summary
+
+| Vocabulary                    | Definition                                                                                           |
+|:------------------------------|:-----------------------------------------------------------------------------------------------------|
+| Control Structures            | Control the order in which R runs your code.                                                         |
+| Condition                     | Indicates something that must be true in order for some code to be executed.                         |
+| Boolean                       | Indicates logical TRUE or FALSE.                                                                     |
+| If...Else Statements          | A control structure in R that runs code base on conditions.                                          |

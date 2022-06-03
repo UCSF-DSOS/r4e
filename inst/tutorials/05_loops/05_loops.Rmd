@@ -10,65 +10,163 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
-## Topic 1
+## Getting Started
 
-### Exercise 
+*Lesson Objective: Create loops to add iterative flows.*
 
-*Here's a simple exercise with an empty code chunk provided for entering the answer.*
+Take a look at the code below. Try to determine the resulting value of `x` without running the code.
 
-Write the R code required to add two plus two:
+```{r exercise_03a, exercise=TRUE}
+x <- 1
 
-```{r two-plus-two, exercise=TRUE}
+if (x < 7){
+  x <- x + 1
+}
 
-```
+if (x < 7){
+  x <- x + 1
+}
 
-### Exercise with Code
+if (x < 7){
+  x <- x + 1
+}
 
-*Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
+if (x < 7){
+  x <- x + 1
+}
 
-Now write a function that adds any two numbers and then call it:
+if (x < 7){
+  x <- x + 1
+}
 
-```{r add-function, exercise=TRUE, exercise.lines = 5}
-add <- function() {
-  
+if (x < 7){
+  x <- x + 1
+}
+
+if (x < 7){
+  x <- x + 1
 }
 ```
 
-## Topic 2
+```{r exercise_03b, echo=FALSE}
+question("What is the value of x?",
+  answer("6"),
+  answer("7", correct = TRUE),
+  answer("8"),
+  answer("Something else"),
+  allow_retry = TRUE
+)
 
-### Exercise with Hint
-
-*Here's an exercise where the chunk is pre-evaulated via the `exercise.eval` option (so the user can see the default output we'd like them to customize). We also add a "hint" to the correct solution via the chunk immediate below labeled `print-limit-hint`.*
-
-Modify the following code to limit the number of rows printed to 5:
-
-```{r print-limit, exercise=TRUE, exercise.eval=TRUE}
-mtcars
 ```
 
-```{r print-limit-hint}
-head(mtcars)
+That might've been an annoying exercise, and you had to count the number of times `if (x < 7)` appeared in the code to ensure the answer wasn't 6.
+
+Luckily, we can use loops to simplify this code and make it more human-interpretable! **Loops** are used to express code that repeats or iterates. In the sample above, you saw that `if (x < 7)` repeated many times.
+
+There are two common forms of loops in R. The `while` loop and the `for` loop.
+
+## While Loop
+
+The **while loop** takes the form below:
+
+    while (boolean_expression){
+
+      # Execute some_code if `boolean_expression` is `TRUE`
+      some_code 
+      
+    }
+
+This may look very similar to an if statement, but there is a key difference. After executing `some_code`, the while loop will check the `boolean_expression` again, and if it is `TRUE`, then the loop will continue executing `some_code`. The while loop will keep repeating or looping until the `boolean_expression` is `FALSE`.
+
+Using a while loop, we can dramatically simplify our code:
+
+```{r exercise_03c, exercise=TRUE}
+x <- 1
+
+while (x < 7){
+  x <- x + 1
+}
+
+print(x)
 ```
 
-### Quiz
+A common error involving while loops is when the `boolean_expression` never evaluates to FALSE, and the loop continues looping indefinitely. This is called an **infinite loop**. Below is an example of an infinite loop.
 
-*You can include any number of single or multiple choice questions as a quiz. Use the `question` function to define a question and the `quiz` function for grouping multiple questions together.*
+    x <- 1
 
-Some questions to verify that you understand the purposes of various base and recommended R packages:
+    # This will infinite loop because x is always greater than 0!
+    while (x > 0){ 
+      x <- x + 1
+    }
 
-```{r quiz}
-quiz(
-  question("Which package contains functions for installing other R packages?",
-    answer("base"),
-    answer("tools"),
-    answer("utils", correct = TRUE),
-    answer("codetools")
-  ),
-  question("Which of the R packages listed below are used to create plots?",
-    answer("lattice", correct = TRUE),
-    answer("tools"),
-    answer("stats"),
-    answer("grid", correct = TRUE)
-  )
+***Pro Tip**: If you are stuck in an infinite loop while executing R code, don't panic. To halt the infinite looping, click the stop sign icon that appears in the top right of the Console pane in RStudio.*
+
+## For Loop
+
+The **for loop** is slightly different than a while loop. Rather than using a condition to determine whether to continue looping, the for loop will apply some code to every item in a vector. For example:
+
+```{r exercise_03d, exercise=TRUE}
+# For every `int_value` in `1:7`, assign `int_value` to `x`
+for (int_value in 1:7){ 
+  x <- int_value
+}
+
+print(x)
+```
+
+*Note: You haven't learned about vectors yet. For now, think of them as collections of items*
+
+## Knowledge Check
+
+Write some code based on the description below:
+
+    Assign 0 to an object named `int_value`
+    Increment `int_value` by 3 while it is less than or equal to 999
+    Print the value stored in `int_value`
+
+You can reveal the solution once you are comfortable with your response
+
+```{r KC3, exercise=TRUE, exercise.lines=15}
+# YOUR WORK HERE
+# Assign 0 to an object named `int_value`
+
+
+# Increment `int_value` by 3 while it is less than or equal to 999
+
+
+
+
+# Print the value stored in `int_value`
+
+```
+
+```{r KC3-solution}
+# Assign 0 to an object named `int_value`
+int_value <- 0
+
+# Increment `int_value` by 3 while it is less than or equal to 999
+while (int_value <= 999){
+  int_value <- int_value + 3
+}
+
+# Print the value stored in `int_value`
+print(int_value)
+```
+
+```{r KC3-question, echo=FALSE}
+question("What is the end value of `int_value`?",
+  answer("999"),
+  answer("1000"),
+  answer("1001"),
+  answer("1002", correct = TRUE),
+  allow_retry = TRUE
 )
 ```
+
+## Summary
+
+| Vocabulary                    | Definition                                                                                           |
+|:------------------------------|:-----------------------------------------------------------------------------------------------------|
+| Loops                         | Code that repeats or iterates.                                                                       |
+| While Loop                    | A type of loop that iterates based on a condition.                                                   |
+| For Loop                      | A type of loop that iterates through a vector.                                                       |
