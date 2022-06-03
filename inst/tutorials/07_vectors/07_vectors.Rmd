@@ -1,6 +1,6 @@
 ---
 title: "R for Everyone Part 7: Vectors"
-description: "Lesson Objective: Manipulate series of values in vectors."
+description: "Learning Objective: Manipulate series of values in vectors."
 output: learnr::tutorial
 runtime: shiny_prerendered
 ---
