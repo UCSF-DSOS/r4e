@@ -1,5 +1,6 @@
 ---
 title: "R for Everyone Part 6: Functions"
+description: "Learning Objective: Define and call functions."
 output: learnr::tutorial
 runtime: shiny_prerendered
 ---
@@ -11,8 +12,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 ## Getting Started
-
-*Lesson Objectives: Define and call functions.*
 
 While coding, in additional to the mathematical and logical operators you learned so far, you can also use functions. For example, take a look at the `sum` function below.
 
