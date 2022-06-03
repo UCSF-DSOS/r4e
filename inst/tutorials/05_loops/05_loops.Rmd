@@ -1,5 +1,6 @@
 ---
 title: "R for Everyone Part 5: Loops"
+description: "Learning Objective: Create loops to add iterative flows."
 output: learnr::tutorial
 runtime: shiny_prerendered
 ---
@@ -11,8 +12,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 ## Getting Started
-
-*Lesson Objective: Create loops to add iterative flows.*
 
 Take a look at the code below. Try to determine the resulting value of `x` without running the code.
 
