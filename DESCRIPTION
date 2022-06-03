@@ -4,8 +4,8 @@ Title: R for Everyone
 Version: 1.0.0
 Date: 2022-06-01
 Authors@R: c(
-    person("Karla", "Lindquist", , "karla.lindquist@ucsf.edu", role = "aut"),
-    person("Albert", "Lee", , "albert.lee8@ucsf.edu", role = "aut")
+    person("Karla", "Lindquist", , "karla.lindquist@ucsf.edu", role = "author"),
+    person("Albert", "Lee", , "albert.lee8@ucsf.edu", role = "maintainer")
   )
 Description: Self-paced course based on content taught in UCSF DSI's R for Everyone workshop.
 License: Creative Commons Attribution-NonCommercial 4.0 International License
