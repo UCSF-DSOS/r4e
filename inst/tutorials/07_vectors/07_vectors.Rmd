@@ -1,0 +1,201 @@
+---
+title: "R for Everyone Part 7: Vectors"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Getting Started
+
+*Lesson Objective: Index vectors*
+
+Suppose you are a teacher, and the table below displays your students' grades.
+
+| student  | assignment1_grade | assignment2_grade | test_grade |
+|:---------|:------------------|:------------------|:-----------|
+| Albert   | 80                | 90                | 65         |
+| Enrico   | 90                | 85                | 70         |
+| Ian      | 85                | 100               | 80         |
+| Michelle | 85                | 85                | 75         |
+| Namari   | 90                | 95                | 75         |
+
+It looks like our students didn't do as well on the test. Let's try to apply a grade adjustment of 5 points to the test.
+
+```{r exercise_02a, exercise=TRUE}
+# assign grades to students
+grade_albert <- 65
+grade_enrico <- 70
+grade_ian <- 80
+grade_michelle <- 75
+grade_namari <- 75
+
+# apply 5 point grade adjustment
+grade_albert <- grade_albert + 5
+grade_enrico <- grade_enrico + 5
+grade_ian <- grade_ian + 5
+grade_michelle <- grade_michelle + 5
+grade_namari <- grade_namari + 5
+
+# display grades
+print(grade_albert)
+print(grade_enrico)
+print(grade_ian)
+print(grade_michelle)
+print(grade_namari)
+```
+
+In the code above, we assigned the test grade of every student to separate objects, and then we added 5 to each object. Although this works, you may have noticed that it is repetitive. There are different objects for different student's scores, and we are applying the same mathematical operation (add 5) to all the objects. Is there a more efficient way to do this? The short answer is yes!
+
+## What are Vectors?
+
+**Vectors** are sequences of values (think rows or columns of data in a table). Let's revisit the example from above, but this time, we'll use a vector.
+
+```{r exercise_02b, exercise=TRUE}
+# assign grades to students
+grades <- c(65, 70, 80, 75, 75)
+
+# apply 5 point grade adjustment
+grades <- grades + 5
+
+# display grades
+print(grades)
+```
+
+As you see, we were able to store all the grades in a single object as a vector using the `c()` function, and when we applied the grade adjustment, all the grades within the vector were adjusted in a single operation.
+
+In addition to integers, vectors can hold other types of values as well. However, each vector can only contain a single type of value.
+
+```{r exercise_02db1, exercise=TRUE}
+# vector of numeric values
+print(c(1.1, 50.0, 92.562))
+
+# vector of character values (use double quotes)
+print(c("pizza", "soda pop", "garlic bread", "3"))
+
+# vector of boolean values
+print(c(TRUE, FALSE))
+```
+
+## Indexing Vectors
+
+You can also adjust individual values within vectors. Let's just say there was a grading error on the first test, and the final test grade should actually be 75. Let's see how that can be done.
+
+```{r exercise_02csetup, include=FALSE}
+grades <- c(65, 70, 80, 75, 75)
+grades <- grades + 5
+```
+
+```{r exercise_02c, exercise=TRUE, exercise.setup="exercise_02csetup"}
+# adjust first test grade
+grades[1] <- 75
+
+# display grades
+print(grades)
+```
+
+Here you see that you can **index** or select specific values within a vector by using square brackets `[ ]`. Since we want to adjust first value within the *grades* vector, we use the index `[1]`. There are some other ways to index as well.
+
+```{r exercise_02dsetup, include=FALSE}
+grades <- c(65, 70, 80, 75, 75)
+grades <- grades + 5
+grades[1] <- 75
+```
+
+```{r exercise_02d, exercise=TRUE, exercise.setup="exercise_02dsetup"}
+# index a single value
+print(grades[1])
+
+# index a sequence of values
+print(grades[1:3])
+
+# index based on a condition
+print(grades[grades > 80])
+```
+
+In fact, the values inside of the square brackets are vectors as well!
+
+-   `1` is a vector of **length** 1.
+
+-   `1:3` is a **sequence** (`c(1, 2, 3)`).
+
+-   `grades > 80` is a vector with boolean values (`c(FALSE, FALSE, TRUE, FALSE, FALSE)`).
+
+![Values inside the square brackets are vectors as well!](images/vector_indexing.gif "Vector Indexing")
+
+## Knowledge Check
+
+Write some code based on the description and table below:
+
+    Assign student names to an object (vector) named `students`
+    Assign assignment 1 grades to an object (vector) named `assignment1_grades`
+    Assign assignment 2 grades to an object (vector) named `assignment2_grades`
+
+    Index the `students` vector and include only those who scored 85 and above on assignment 1 and 90 or above on assignment 2. Store the results in an object called `high_achievers` and print the results.
+
+***Hint**: What's the result of `c(TRUE, TRUE, FALSE, FALSE) & c(TRUE, FALSE, TRUE, FALSE)?` How about `c(TRUE, TRUE, FALSE, FALSE) | c(TRUE, FALSE, TRUE, FALSE)`? Test these out in the Console to understand how logical AND and OR operations are applied to vectors.*
+
+| student  | assignment1_grade | assignment2_grade | test_grade |
+|:---------|:------------------|:------------------|:-----------|
+| Albert   | 80                | 90                | 65         |
+| Enrico   | 90                | 85                | 70         |
+| Ian      | 85                | 100               | 80         |
+| Michelle | 85                | 85                | 75         |
+| Namari   | 90                | 95                | 75         |
+
+You can reveal the solution once you are comfortable with your response
+
+```{r KC2a, exercise=TRUE, exercise.lines=15}
+# YOUR WORK HERE
+
+# Assign student names to an object (vector) named `students`
+
+
+# Assign assignment 1 grades to an object (vector) named `assignment1_grades`
+
+
+# Assign assignment 2 grades to an object (vector) named `assignment2_grades`
+
+
+# Index the `students` vector and include only those that scored 85 or above on assignment 1 and 90 or above on assignment 2. Store the results in an object called `high_achievers`.
+
+
+# Print `high_achievers`
+
+
+```
+
+```{r KC2a-solution}
+# Assign student names to an object named `students`
+students <- c("Albert", "Enrico", "Ian", "Michelle", "Namari")
+
+# Assign assignment 1 grades to an object named `assignment1_grades`
+assignment1_grades <- c(80, 90, 85, 85, 90)
+
+# Assign assignment 2 grades to an object named `assignment2_grades`
+assignment2_grades <- c(90, 85, 100, 85, 95)
+
+# Index the `students` vector and include only those that scored 85 or above on assignment 1 and 90 or above on assignment 2. Store the results in an object called `high_achievers`.
+high_achievers <- students[assignment1_grades >= 85 & assignment2_grades >= 90]
+
+# Print `high_achievers`
+print(high_achievers)
+```
+
+## Summary
+
+**Key Concepts**
+
+-   Use the `c()` function to create **vectors**.
+-   Use square brackets (`[ ]`) to **index** data in vectors, matrices, and data frames.
+
+| Vocabulary                   | Definition                                                                                       |
+|------------------------------|--------------------------------------------------------------------------------------------------|
+| Vector                       | A sequence of values.                                                                            |
+| Index                        | Select specific values within a vector, matrix, or dataframe.                                    |
+| Length                       | The number of values in a vector. It also refers to the number of rows in a matrix or dataframe. |
+
