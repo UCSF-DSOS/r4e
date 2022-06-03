@@ -1,5 +1,6 @@
 ---
 title: "R for Everyone Part 8: Matrices"
+description: "Learning Objective: Manipulate two-dimensional arrays of values in matrices."
 output: learnr::tutorial
 runtime: shiny_prerendered
 ---
@@ -10,8 +11,6 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## Getting Started
-
-*Lesson Objective: Index matrices.*
 
 As useful as vectors are, they are 1-dimensional (literally!), and most data isn't. Even with our table of students grades, the data is 2-dimensional (includes both rows and columns).
 
