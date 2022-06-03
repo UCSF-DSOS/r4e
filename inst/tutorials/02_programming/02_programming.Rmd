@@ -1,6 +1,6 @@
 ---
 title: "R for Everyone Part 2: Computer Programming"
-description: "*Learning Objective: Create and run R scripts.*"
+description: "Learning Objective: Create and run R scripts."
 output: learnr::tutorial
 runtime: shiny_prerendered
 ---
