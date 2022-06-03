@@ -1,5 +1,6 @@
 ---
 title: "R for Everyone Part 3: Objects"
+description: "Learning Objective: Store values inside of objects (variables)."
 output: learnr::tutorial
 runtime: shiny_prerendered
 ---
@@ -11,8 +12,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 ## Getting Started
-
-*Lesson Objective: Store values inside of objects (variables).*
 
 Let's begin with a quick warm-up exercise. Go ahead and adjust the code below by uncommenting `print(x)` and `print(y)` (see Pro Tip). Then, run your code and answer the two quiz questions.
 
