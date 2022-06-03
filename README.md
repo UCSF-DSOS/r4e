@@ -1,8 +1,8 @@
 # Course Access Instructions
 
-You'll need to have R and RStudio installed, and you'll access the self-paced R for Everyone modules directly inside of RStudio!
+You'll need to have R and RStudio installed, and you'll access the self-paced R for Everyone course directly inside of RStudio!
 
-To access the modules, open RStudio, and you'll need to complete the following steps:
+To access the course, open RStudio, and you'll need to complete the following steps:
 
 1.  Install learnr and devtools
 
@@ -32,26 +32,38 @@ After you've installed *learnr* and *devtools*, you'll need to load them in your
 
 ## Install UCSF DSI Courses
 
-After you'd loaded *learnr* and devtools, you can install R courses from UCSF DSI. Courses are constantly updated, and you should install the courses every time to ensure you are viewing the most up-to-date version of the course.
+After you'd loaded *learnr* and devtools, you can install course. UCSF DSI courses are regularly updated, and you should install the course every time to ensure you are viewing the most up-to-date version of the course.
 
-    devtools::install_github("UCSF-DSI/UCSFDSILearnr")
+    devtools::install_github("UCSF-DSI/r4e")
 
-## Launch Courses
+## Launch Course
 
-Now that the courses have been installed, you can access them in the Tutorial Pane at the top right of RStudio.
+Now that the course has been installed, you can access the lessons in the Tutorial Pane at the top right of RStudio.
 
 ![Tutorials Pane is at the Top Right of RStudio](images/tutorials.png "Tutorials Pane is at the Top Right of RStudio")
 
-The courses in this series are:
+The lessons in this course are:
 
--   R for Everyone - Part 1: The Basics
+1.  R and RStudio
 
--   R for Everyone - Part 2: Computer Programming
+2.  Computer Programming
 
--   R for Everyone - Part 3: Data
+3.  Objects
 
-Begin a course by clicking *Start Tutorial*. We recommend viewing the course in a new window, and to do that, you'll just need to click the *Show in new window* icon at the top left of the Tutorial Pane.
+4.  Conditions
+
+5.  Loops
+
+6.  Functions
+
+7.  Vectors
+
+8.  Matrices
+
+9.  Data Frames
+
+Begin a lesson by clicking *Start Tutorial*. We recommend viewing the lesson in a new window, and to do that, you'll just need to click the *Show in new window* icon at the top left of the Tutorial Pane.
 
 ![Tutorial Menu is on the Top Left of the Tutorial Pane](images/tutorial_menu.png "Tutorial Menu is on the Top Left of the Tutorial Pane")
 
-You can stop or pause the course at any time, and RStudio will remember your progress.
+You can stop or pause the lesson at any time, and RStudio will remember your progress.
