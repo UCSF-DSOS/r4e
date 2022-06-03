@@ -1,5 +1,6 @@
 ---
 title: "R for Everyone Part 9: Data Frames"
+description: "Learning Objective: Load and manipulate tabular data in data frames."
 output: learnr::tutorial
 runtime: shiny_prerendered
 ---
@@ -10,8 +11,6 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## Getting Started
-
-*Lesson Objective: Load and manipulate data in data frames.*
 
 With a matrix, you can now work with 2-dimensional data. However, one of matrix's limitations (or feature depending on your perspective) is that all values must be the same type. However, the data you're working with often contains multiple types of values.
 
