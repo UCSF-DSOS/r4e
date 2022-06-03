@@ -1,5 +1,6 @@
 ---
 title: "R for Everyone Part 7: Vectors"
+description: "Lesson Objective: Manipulate series of values in vectors."
 output: learnr::tutorial
 runtime: shiny_prerendered
 ---
@@ -11,8 +12,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 ## Getting Started
-
-*Lesson Objective: Index vectors*
 
 Suppose you are a teacher, and the table below displays your students' grades.
 
