@@ -1,5 +1,7 @@
 ---
 title: "R for Everyone Part 0: Introduction"
+description: "Want to learn computer programming but don't know where to start? You're
+in the right place!"
 output: learnr::tutorial
 runtime: shiny_prerendered
 editor_options: 
