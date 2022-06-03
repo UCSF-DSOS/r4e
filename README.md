@@ -21,7 +21,7 @@ To install learnr and devtools, copy and paste the commands below into RStudio C
     install.packages("learnr")
     install.packages("devtools")
 
-![Enter Commands into RStudio Console](images/install_learnr.png "Enter Commands into RStudio Console")
+![Enter Commands into RStudio Console](images/install_learnr.png)
 
 ## Load learnr and devtools
 
@@ -40,7 +40,7 @@ After you'd loaded *learnr* and devtools, you can install course. UCSF DSI cours
 
 Now that the course has been installed, you can access the lessons in the Tutorial Pane at the top right of RStudio.
 
-![Tutorials Pane is at the Top Right of RStudio](images/tutorials.png "Tutorials Pane is at the Top Right of RStudio")
+![Tutorials Pane is at the Top Right of RStudio](images/tutorials.png)
 
 The lessons in this course are:
 
