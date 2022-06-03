@@ -1,5 +1,6 @@
 ---
 title: "R for Everyone Part 1: R and RStudio"
+description: "Learning Objective: Describe reasons to use RStudio to interact with R."
 output: learnr::tutorial
 runtime: shiny_prerendered
 ---
@@ -10,8 +11,6 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## Getting Started
-
-*Describe reasons to use RStudio to interact with R.*
 
 ![R and RStudio Logos](images/r_logos.png "R and RStudio Logos"){width="100%"}
 
