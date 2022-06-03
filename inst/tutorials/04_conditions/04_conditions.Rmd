@@ -1,5 +1,6 @@
 ---
 title: "R for Everyone Part 4: Conditions"
+description: "Learning Objective: Apply conditional logic using if...else statement."
 output: learnr::tutorial
 runtime: shiny_prerendered
 ---
@@ -11,8 +12,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 ## Getting Started
-
-*Lesson Objective: Apply conditional logic using if...else statement.*
 
 Up to this point, the computer programs (R scripts) you created all executed sequentially. In other words, R ran every line of your code in order for top to bottom.
 
