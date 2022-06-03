@@ -8,9 +8,9 @@ To access the course, open RStudio, and you'll need to complete the following st
 
 2.  Load learnr and devtools
 
-3.  Install UCSF DSI Courses
+3.  Install Course
 
-4.  Launch Courses
+4.  Launch Lessons
 
 ## Install learnr and devtools
 
@@ -30,13 +30,13 @@ After you've installed *learnr* and *devtools*, you'll need to load them in your
     library(learnr)
     library(devtools)
 
-## Install UCSF DSI Courses
+## Install Course
 
 After you'd loaded *learnr* and devtools, you can install course. UCSF DSI courses are regularly updated, and you should install the course every time to ensure you are viewing the most up-to-date version of the course.
 
     devtools::install_github("UCSF-DSI/r4e")
 
-## Launch Course
+## Launch Lesson
 
 Now that the course has been installed, you can access the lessons in the Tutorial Pane at the top right of RStudio.
 
