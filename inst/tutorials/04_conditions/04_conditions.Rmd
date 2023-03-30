@@ -7,6 +7,7 @@ runtime: shiny_prerendered
 
 ```{r setup, include=FALSE}
 library(learnr)
+library(gradethis)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
@@ -228,6 +229,20 @@ if (score >= 90){          # If score is 90 or above, assign "A" to an object na
 
 # Print the value stored in `grade`
 print(grade)
+```
+
+
+```{r KC2-check}
+grade_this({
+  fail_if(!exists("score", .envir_result), "Remember to create an object called `score`.")
+  fail_if(!exists("grade", .envir_result), "Remember to create an object called `grade` and to calculate it based on `score`.")
+  fail_if_equal(y = "A", x = get("grade", .envir_result), "Incorrect. Hint: `score` is not 90 or above")
+  fail_if_equal(y = "B", x = get("grade", .envir_result), "Incorrect. Hint: `score` is not 80 or above")
+  fail_if_equal(y = "C", x = get("grade", .envir_result), "Incorrect. Hint: `score` is not 70 or above")
+  fail_if_equal(y = "D", x = get("grade", .envir_result), "Incorrect. Hint: `score` is not 60 or above")
+  pass_if_equal(y = "E", x = get("grade", .envir_result))
+})
+```
 ```
 
 ## Summary
