@@ -18,7 +18,6 @@ You can skip this step of you've already previously installed *learnr* and *devt
 
 To install learnr and devtools, copy and paste the commands below into RStudio Console and press *Enter*.
 
-    install.packages("usethis")
     install.packages("learnr")
     install.packages("devtools")
 
@@ -28,9 +27,7 @@ To install learnr and devtools, copy and paste the commands below into RStudio C
 
 After you've installed *learnr* and *devtools*, you'll need to load them in your RStudio session. To do this, copy and paste the commands below into RStudio Console and press *Enter*.
 
-    library(usethis)
     library(learnr)
-    library(devtools)
 
 ## Install Course
 
